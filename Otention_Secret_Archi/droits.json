@@ -1,0 +1,46 @@
+{
+    "chiffrement":
+        {
+            "users":[
+                {
+                    "name": "Ibende",
+                    "droits": "rw-"
+                },
+                {
+                    "name": "Xavier",
+                    "droits": "--x"
+                }
+  
+            ]
+        },
+
+        
+        "codesmonitoring":
+        {
+            "users":[
+                {
+                    "name": "Ebode",
+                    "droits": "--x"           
+                },
+                {
+                    "name": "Xavier",
+                    "droits": "rw-"
+                }
+  
+            ]
+        },
+        "codebackeend":
+        {
+            "users":[
+                {
+                    "name": "Xavier",
+                    "droits": "r-x"         
+                },
+                {
+                    "name": "Ibende",
+                    "droits": "rwx"
+                }
+  
+            ]
+        }
+    }
