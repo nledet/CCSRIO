@@ -1,5 +1,5 @@
 #!/bin/bash
-awk -F, 'NR > 1 {print $1, $2, $3}' employees.csv | while read -r name birthday hire_date; do
+awk -F, 'NR > 1 {print $1,$2, $3, $4,$5,$6}' srioeye_stolen_data.csv | while read -r name birthday hire_date; do
   # Process the data for each employee
 
   for x in $name; do
