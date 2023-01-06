@@ -10,8 +10,8 @@ cryptName(){
 
 cryptFile(){
     echo cryptFile $1
-    
-    echo $(cat "$2/$1" | tr '[A-Za-z0-9]' '[F-ZA-Ef-za-e5-90-4]') > "$2/$1"
+    #cipher de cesar de 3
+    echo $(cat "$2/$1" | tr '[A-Za-z0-9]' '[E-ZA-De-za-d4-90-3]') > "$2/$1"
 }
 
 
