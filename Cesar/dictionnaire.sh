@@ -1,5 +1,5 @@
 #!/bin/bash
-awk -F, 'NR > 1 {print $1,$2, $3, $4,$5,$6}' tests.csv | while read -r fname lname birth embauche children parent ; do
+awk -F, 'NR > 1 {print $1,$2, $3, $4,$5,$6}' srioeye_stolen_data.csv | while read -r fname lname birth embauche children parent ; do
   # Process the data for each employee
 
 # Déclaration de l'array contenant les données
@@ -25,8 +25,9 @@ do
     done
   done
 done
-
-done
 fin=$(date +%s)
+echo "debut : $debut"
+echo "fin : $fin"
 duree=$(( $fin - $debut ))
 echo "latence moyenne : $duree secondes"
+done
