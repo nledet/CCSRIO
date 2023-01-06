@@ -2,20 +2,27 @@
 awk -F, 'NR > 1 {print $1,$2, $3, $4,$5,$6}' srioeye_stolen_data.csv | while read -r fname lname birth embauche children parent ; do
   # Process the data for each employee
 
+# Déclaration de l'array contenant les données
 data=($fname $lname $birth $embauche $children $parent)
-size=${#data[@]}
-count=0
-exec 3>dictionary.txt
-while [ $count -lt 720 ]
-do
-  random=$(echo $(seq $size) | shuf) 
-  count=$((count+1))
 
-  for i in $random
-  do 
-    echo -n "${data[$i-1]}" 1>&3
-  done 
-  echo 1>&3
-done 
-exec 3>&-
+# Génération de toutes les permutations et écriture dans le fichier
+for i in "${data[@]}"
+do
+  for j in "${data[@]}"
+  do
+    for k in "${data[@]}"
+    do
+      for l in "${data[@]}"
+      do
+        for m in "${data[@]}"
+        do
+          for n in "${data[@]}"
+          do
+            echo "$i$j$k$l$m$n" >> permutations.txt
+          done
+        done
+      done
+    done
+  done
+done
 done
